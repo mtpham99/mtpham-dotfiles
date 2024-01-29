@@ -1,0 +1,8 @@
+[submodule "home/.config/wezterm"]
+	path = home/.config/wezterm
+	url = git@github.com:mtpham99/wezterm-config.git
+	branch = main
+[submodule "home/.config/nvim"]
+	path = home/.config/nvim
+	url = git@github.com:mtpham99/nvim-config.git
+	branch = master

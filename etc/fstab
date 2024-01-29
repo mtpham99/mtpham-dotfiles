@@ -1,0 +1,29 @@
+# Root
+/dev/mapper/cr_root  /                       btrfs  defaults,subvol=/@               0  0
+/dev/mapper/cr_root  /.snapshots             btrfs  subvol=/@/.snapshots             0  0
+/dev/mapper/cr_root  /var                    btrfs  subvol=/@/var                    0  0
+/dev/mapper/cr_root  /usr/local              btrfs  subvol=/@/usr/local              0  0
+/dev/mapper/cr_root  /usr/local/.snapshots   btrfs  subvol=/@/usr/local/.snapshots   0  0
+/dev/mapper/cr_root  /srv                    btrfs  subvol=/@/srv                    0  0
+/dev/mapper/cr_root  /srv/.snapshots         btrfs  subvol=/@/srv/.snapshots         0  0
+/dev/mapper/cr_root  /root                   btrfs  subvol=/@/root                   0  0
+/dev/mapper/cr_root  /root/.snapshots        btrfs  subvol=/@/root/.snapshots        0  0
+/dev/mapper/cr_root  /opt                    btrfs  subvol=/@/opt                    0  0
+/dev/mapper/cr_root  /opt/.snapshots         btrfs  subvol=/@/opt/.snapshots         0  0
+/dev/mapper/cr_root  /home                   btrfs  subvol=/@/home                   0  0
+/dev/mapper/cr_root  /home/.snapshots        btrfs  subvol=/@/home/.snapshots        0  0
+/dev/mapper/cr_root  /boot/grub2/x86_64-efi  btrfs  subvol=/@/boot/grub2/x86_64-efi  0  0
+/dev/mapper/cr_root  /boot/grub2/i386-pc     btrfs  subvol=/@/boot/grub2/i386-pc     0  0
+UUID=DD7B-D582       /boot/efi               vfat   utf8                             0  2
+
+# Tmpfs size
+tmpfs  /tmp  tmpfs  rw,nodev,nosuid,size=16G  0  0
+
+# Home subdirs/subvols for excluding from snapshots
+/dev/mapper/cr_root  /home/mpham/tmp         btrfs  subvol=/@/home/mpham/tmp         0  0
+/dev/mapper/cr_root  /home/mpham/git         btrfs  subvol=/@/home/mpham/git         0  0
+/dev/mapper/cr_root  /home/mpham/Downloads   btrfs  subvol=/@/home/mpham/Downloads   0  0
+
+# Data Drive
+/dev/mapper/cryptdata  /mnt/data     	      btrfs  defaults,subvol=/@data   0  0
+/dev/mapper/cryptdata  /srv/jellyfin/media  btrfs  defaults,subvol=/@media  0  0
