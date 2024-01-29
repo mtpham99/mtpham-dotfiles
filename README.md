@@ -1,4 +1,4 @@
-# My Config/Dot Files
+# My Config/Dot Files (Archlinux Hyprland)
 
 My config/dot files. Check branches for distros.
 

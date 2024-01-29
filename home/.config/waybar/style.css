@@ -1,0 +1,157 @@
+* {
+    background-color: transparent;
+
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 1rem;
+
+    border: 0rem solid transparent;
+    border-radius: 0px;
+
+    padding: 0rem;
+    margin: 0rem;
+}
+
+tooltip {
+    background-color: black;
+}
+
+#workspaces {
+    border: 0.1rem solid white;
+    border-radius: 999px;
+    background-color: black;
+
+    padding: 0rem 0rem;
+    margin: 0rem 0rem;
+
+    margin-left: 0.3125rem;
+}
+
+#workspaces button {
+    color: white;
+    background-color: transparent;
+
+    border: 0.1rem solid transparent;
+    border-radius: 999px;
+
+    padding: 0rem 0.825rem;
+    margin: 0rem 0rem;
+}
+
+#workspaces button.active {
+    color: white;
+    background-color: #262A36;
+
+    border: 0.1rem solid white;
+    border-radius: 999px;
+
+    padding: 0rem 0.825rem;
+    margin: 0rem 0rem;
+}
+
+#workspaces button:hover {
+    color: white;
+    background-color: #262A36;
+
+    border: 0.1rem solid white;
+    border-radius: 999px;
+
+    padding: 0rem 0.825rem;
+    margin: 0rem 0rem;
+}
+
+#mpris {
+    color: white;
+    background-color: black;
+
+    border: 0.1rem solid white;
+    border-radius: 999px;
+
+    padding: 0rem 0.625rem;
+    margin: 0rem 0rem;
+
+    margin-left: 0.3125rem;
+
+    min-width: 0;
+}
+
+/*
+#window {
+    color: white;
+    background-color: black;
+
+    border: 0.1rem solid white;
+    border-radius: 999px;
+
+    padding: 0rem 0.625rem;
+    margin: 0rem 0rem; 
+    
+    margin-left: 0.3125rem;
+}
+*/
+
+#clock {
+    color: white;
+    background-color: black;
+
+    border: 0.1rem solid white;
+    border-radius: 999px;
+
+    padding: 0rem 0.625rem;
+    margin: 0rem 0rem;
+}
+
+#network {
+    color: white;
+    background-color: black;
+
+    border: 0.1rem solid white;
+    border-radius: 999px;
+
+    padding: 0rem 0.625rem;
+    margin: 0rem 0.3125rem;
+}
+
+#pulseaudio {
+    color: white;
+    background-color: black;
+
+    border: 0.1rem solid white;
+    border-radius: 999px;
+
+    padding: 0rem 0.625rem;
+    margin: 0rem 0.3125rem;
+}
+
+#backlight {
+    color: white;
+    background-color: black;
+
+    border: 0.1rem solid white;
+    border-radius: 999px;
+
+    padding: 0rem 0.625rem;
+    margin: 0rem 0.3125rem;
+}
+
+#battery {
+    color: white;
+    background-color: black;
+
+    border: 0.1rem solid white;
+    border-radius: 999px;
+
+    padding: 0rem 0.625rem;
+    margin: 0rem 0.3125rem;
+}
+
+#tray {
+    color: white;
+    background-color: black;
+
+    border: 0.1rem solid white;
+    border-radius: 999px;
+
+    padding: 0rem 0.625rem;
+    margin: 0rem 0.3125rem;
+}

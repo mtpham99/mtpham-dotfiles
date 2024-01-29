@@ -1,0 +1,140 @@
+{
+    // Bar
+    "layer": "top",
+    "position": "top",
+    "modules-left": ["hyprland/workspaces", "mpris"], // "hyprland/window"
+    "modules-center": ["clock"],
+    "modules-right": ["network", "pulseaudio", "backlight", "battery", "tray"],
+
+    // workspaces
+    "hyprland/workspaces": {
+        "persistent-workspaces": {
+            "1":  [],
+            "2":  [],
+            "3":  [],
+            "4":  [],
+            "5":  [],
+            // "6":  [],
+            // "7":  [],
+            // "8":  [],
+            // "9":  [],
+            // "10": []
+        },
+        "on-scroll-up": "hyprctl dispatch workspace -1",
+        "on-scroll-down": "hyprctl dispatch workspace +1"
+    },
+
+    // mpris
+    "mpris": {
+        "player": "playerctld",
+        "format": "{status_icon} <i>{dynamic}</i>",
+        "dynamic-len": 48,
+        "interval": 1,
+        "player-icons": {
+            "default": "",
+        },
+        "status-icons": {
+            "paused": "󰏤",
+            "playing": "",
+            "stopped": "󰓛",
+        },
+        "on-click": "playerctl play-pause",
+        "on-click-middle": "playerctl previous track",
+        "on-click-right": "playerctl next track",
+
+        "tooltip-format": "({status}) {player}: {dynamic}"
+    },
+
+    // (active) window
+    // "hyprland/window": {
+    //     "format": "{class}",
+    //     "rewrite": {
+    //         "org.qbittorrent.qBittorrent": "qBittorrent"
+    //     },
+    //     "separate-outputs": true
+    // },
+
+    // clock
+    "clock": {
+        "format": "{:%a %d %b, %H:%M:%S}",
+        "interval": 1,
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode"          : "year",
+            "mode-mon-col"  : 3,
+            "on-scroll"     : 1,
+            "on-click-right": "mode",
+            "format": {
+                  "months":   "<span color='#ffead3'><b>{}</b></span>",
+                  "days":     "<span color='#ecc6d9'><b>{}</b></span>",
+                  "weeks":    "<span color='#99ffdd'><b>W{}</b></span>",
+                  "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                  "today":    "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+
+    // network
+    "network": {
+        "format": "{ifname}",
+        "format-ethernet": "Wired 󰈀",
+        "format-wifi": "{essid}  ",
+        "format-linked": "{ifname} 󱘖",
+        "format-disconnected": "Disconnected ",
+        "on-click": "nm-connection-editor",
+        "interval": 10
+    },
+
+    // pulseaudio
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-muted": "{volume}% 󰝟 {format_source}",
+        "format-source": "",
+        "format-source-muted": "",
+        "on-click": "pavucontrol -t 3", // Tab 3: Output devices
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    },
+
+    // "pulseaudio#input": {
+    //     "format": "{format_source}", // make custom for displaying mic input volume
+    //     "format-source": "",
+    //     "format-source-muted": "",
+    //     "on-click": "pavucontrol -t 4", // Tab 4: Input devices
+    // },
+
+    // backlight
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{percent}% {icon}",
+        "format-icons": ["󰃟"] // ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
+    },
+
+    // battery
+    "battery": {
+        "interval": 60,
+        "statues": {
+            "good": 70,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    // tray
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8
+    }
+}

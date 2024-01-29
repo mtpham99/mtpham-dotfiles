@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=nvtop
+GenericName=GPU Process Monitor
+Type=Application
+Terminal=false
+Exec=kitty nvtop
+Icon=/usr/share/icons/Papirus/64x64/apps/nvtop.svg
+Categories=System;Monitor;
+X-AppImage-Integrate=false
+
